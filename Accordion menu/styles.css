@@ -1,0 +1,329 @@
+/* -----------------------------------------------ACCORDION MENU --------------------------------------------
+
+.accordion {
+
+  margin-bottom: 24px;
+
+}
+
+ 
+
+.accordion-container {
+
+  width: 90%;
+
+  max-width: 1240px;
+
+  margin: 0 auto;
+
+  border: 3px solid #e0e0e0;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+}
+
+ 
+
+ 
+
+.accordion-item {
+
+  width: 100%;
+
+}
+
+ 
+
+.accordion-trigger {
+
+  width: 100%;
+
+  display: block;
+
+  background-color: rgb(250, 250, 250);
+
+  color: rgb(0, 0, 0);
+
+  padding: 24px;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  font-family: 'Inter', sans-serif;
+
+  text-align: left;
+
+  border: none;
+
+  display: flex;
+
+  gap: 16px;
+
+  justify-content: space-between;
+
+  cursor: pointer;
+
+}
+
+ 
+
+.accordion-icon {
+
+  transition: transform 0.5s;
+
+}
+
+ 
+
+.accordion-item[open] .accordion-icon {
+
+  transform: rotate(45deg);
+
+}
+
+ 
+
+.accordion-item:not(:first-of-type) .accordion-trigger {
+
+  border-top: 3px solid #eaeaea;
+
+}
+
+ 
+
+.accordion-content p {
+
+  margin: 24px;
+
+}
+
+*/
+
+/* -----------------------------------------------W3C ACCORDION MENU --------------------------------------------*/
+
+.accordion {
+
+  margin: 0;
+
+  padding: 0;
+
+  border: 2px solid hsl(0deg 0% 52%);
+
+  border-radius: 7px;
+
+  width: 85%;
+
+}
+
+ 
+
+.accordion h3 {
+
+  margin: 0;
+
+  padding: 0;
+
+}
+
+ 
+
+.accordion:focus-within {
+
+  border-color: hsl(216deg 94% 43%);
+
+}
+
+ 
+
+.accordion:focus-within h3 {
+
+  background-color: hsl(0deg 0% 97%);
+
+}
+
+ 
+
+.accordion > * + * {
+
+  border-top: 1px solid hsl(0deg 0% 52%);
+
+}
+
+ 
+
+.accordion-trigger {
+
+  background: none;
+
+  color: hsl(0deg 0% 13%);
+
+  display: block;
+
+  font-size: 16px;
+
+  font-weight: bold;
+
+  margin: 4px;
+
+  padding: 1em 1.5em;
+
+  position: relative;
+
+  text-align: left;
+
+  width: 99%;
+
+  outline: none;
+
+}
+
+ 
+
+.accordion-trigger:focus,
+
+.accordion-trigger:hover {
+
+  background: hsl(216deg 94% 94%);
+
+}
+
+ 
+
+.accordion-trigger:focus {
+
+  outline: 4px solid transparent;
+
+}
+
+ 
+
+.accordion > *:first-child .accordion-trigger,
+
+.accordion > *:first-child {
+
+  border-radius: 5px 5px 0 0;
+
+}
+
+ 
+
+.accordion > *:last-child .accordion-trigger,
+
+.accordion > *:last-child {
+
+  border-radius: 0 0 5px 5px;
+
+}
+
+ 
+
+button {
+
+  border-style: none;
+
+}
+
+ 
+
+.accordion button::-moz-focus-inner {
+
+  border: 0;
+
+}
+
+ 
+
+.accordion-title {
+
+  display: block;
+
+  pointer-events: none;
+
+  border: transparent 2px solid;
+
+  border-radius: 5px;
+
+  padding: 0.25em;
+
+  outline: none;
+
+}
+
+ 
+
+.accordion-trigger:focus .accordion-title {
+
+  border-color: hsl(216deg 94% 43%);
+
+}
+
+ 
+
+.accordion-icon {
+
+  border: solid currentcolor;
+
+  border-width: 0 2px 2px 0;
+
+  height: 0.5rem;
+
+  pointer-events: none;
+
+  position: absolute;
+
+  right: 2em;
+
+  top: 50%;
+
+  transform: translateY(-60%) rotate(45deg);
+
+  width: 0.5rem;
+
+}
+
+ 
+
+.accordion-trigger:focus .accordion-icon,
+
+.accordion-trigger:hover .accordion-icon {
+
+  border-color: hsl(216deg 94% 43%);
+
+}
+
+ 
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+
+  transform: translateY(-50%) rotate(-135deg);
+
+}
+
+ 
+
+.accordion-panel {
+
+  margin: 0;
+
+  padding: 1em 1.5em;
+
+}
+
+ 
+
+/* For Edge bug https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/4806035/ */
+
+.accordion-panel[hidden] {
+
+  display: none;
+
+}
+
+.accordion {
+
+  box-sizing: content-box;
+
+}
